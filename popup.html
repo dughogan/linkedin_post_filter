@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    body {
+      width: 300px;
+      padding: 16px;
+      font-family: system-ui, -apple-system, sans-serif;
+    }
+    .container {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+    h3 {
+      margin: 0 0 16px 0;
+      color: #0a66c2;
+    }
+    select {
+      width: 100%;
+      padding: 8px;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+      margin-top: 4px;
+    }
+    .setting {
+      display: flex;
+      flex-direction: column;
+    }
+    .checkbox-setting {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .status {
+      margin-top: 16px;
+      padding: 8px;
+      border-radius: 4px;
+      background: #e8f5e9;
+      color: #2e7d32;
+      display: none;
+    }
+    label {
+      font-weight: 500;
+      color: #333;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h3>LinkedIn Job Filterer</h3>
+    
+    <div class="setting">
+      <label for="country">I am eligible to work in:</label>
+      <select id="country">
+        <option value="US">United States</option>
+        <option value="CA">Canada</option>
+        <option value="UK">United Kingdom</option>
+        <option value="AU">Australia</option>
+        <option value="NZ">New Zealand</option>
+        <option value="EU">European Union</option>
+      </select>
+    </div>
+
+    <div class="checkbox-setting">
+      <input type="checkbox" id="showRemote" checked>
+      <label for="showRemote">Show remote positions that accept my location</label>
+    </div>
+
+    <div id="status" class="status">Settings saved!</div>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>
